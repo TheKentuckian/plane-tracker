@@ -113,7 +113,7 @@
     // --- Main Fetch and Update Function ---
     async function fetchFlightData() {
         const bounds = map.getBounds().pad(0.5);
-        const openSkyUrl = `https://opensky-network.org/api/states/all?lamin=${bounds.getSouth()}&lomin=${bounds.getWest()}&lamax=${bounds.getNorth()}&lomax=${bounds.getEast()}`;
+        const openSkyUrl = `https://plane-tracker-proxy.tony-anzelmo.workers.dev/api/states/all?lamin=${bounds.getSouth()}&lomin=${bounds.getWest()}&lamax=${bounds.getNorth()}&lomax=${bounds.getEast()}`;
         
         try {
             const response = await fetch(openSkyUrl);
